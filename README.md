@@ -4,11 +4,16 @@ squid
 Squid for mips
 
 ###./configure
-Before you need config the cross compiler tools to the PATH, something like this:
+You need config the cross compiler tools to the PATH, something like this:
 ```
 export PATH=/opt/buildroot-gcc342/bin/:${PATH}
 ```
-Add to the ~/.bashrc
+Add it to the ~/.bashrc
+```
+source ~/.bashrc
+```
+
+Now start ./configure
 ```
 ./configure --host=mipsel-linux --build=i686-ubuntu-linux  --cache-file=mips-cache --disable-epoll
 ```
@@ -30,7 +35,7 @@ cf_parser.h: cf.data cf_gen$(EXEEXT)
 I have change it from ./cf_gen to ../cf_gen
 
 
-###Issues 1
+###Issues 2
 Second add the romfs target to ./Makefile, copy the squid to the romfs/bin/, because this is just test, so for more further usage, need consider all the specific files needed.
 ```
 romfs:
