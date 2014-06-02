@@ -1,0 +1,4 @@
+squid
+=====
+
+Squid for mips
